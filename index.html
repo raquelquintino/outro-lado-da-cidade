@@ -3,249 +3,598 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Acervo sonoro de pesquisa-ação sobre moradia e comunicação em Mauá (2011). 20 programas de rádio comunitária.">
-    <meta name="theme-color" content="#B45309">
+    <meta name="description" content="O Outro Lado da Cidade — 20 programas de rádio comunitária (2011). Acervo sonoro de pesquisa-ação sobre moradia e comunicação em Mauá, SP.">
+    <meta name="theme-color" content="#FF6600">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="O Outro Lado da Cidade — 20 Programas de Rádio Comunitária">
-    <meta property="og:description" content="Acervo sonoro de pesquisa-ação sobre moradia e comunicação em Mauá (2011)">
+    <meta property="og:title" content="O Outro Lado da Cidade — Acervo Completo (2011)">
+    <meta property="og:description" content="20 programas de rádio comunitária. Pesquisa de Raquel Quintino com ADEHAB.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://raquelquintino.github.io/outro-lado-da-cidade/">
-    <meta property="og:image" content="https://raquelquintino.github.io/outro-lado-da-cidade/og-image.jpg">
     
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "PodcastSeries",
-      "name": "O Outro Lado da Cidade",
-      "description": "20 programas de rádio comunitária de pesquisa-ação sobre moradia em Mauá, SP (2011)",
-      "url": "https://raquelquintino.github.io/outro-lado-da-cidade/",
-      "creator": {
-        "@type": "Person",
-        "name": "Raquel Quintino"
-      },
-      "datePublished": "2011-07-01",
-      "spatialCoverage": "Mauá, São Paulo, Brasil"
-    }
-    </script>
-    
-    <title>O Outro Lado da Cidade — 20 Programas de Rádio Comunitária</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <title>O Outro Lado da Cidade — Acervo Completo (2011)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #FF6600 0%, #FF8533 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(255, 102, 0, 0.15);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            max-width: 120px;
+            height: auto;
+        }
+        
+        .header-text h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+        
+        .header-text p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .about-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-section h2 {
+            color: #FF6600;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .about-section p {
+            color: #555;
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+        
+        .about-section strong {
+            color: #333;
+        }
+        
+        .table-wrapper {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        thead {
+            background: linear-gradient(135deg, #FF6600 0%, #FF8533 100%);
+            color: white;
+        }
+        
+        thead th {
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        tbody tr {
+            border-bottom: 1px solid #e8e8e8;
+            transition: background-color 0.2s ease;
+        }
+        
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        tbody tr:hover {
+            background-color: #f0f0f0;
+        }
+        
+        tbody td {
+            padding: 16px;
+            font-size: 0.95rem;
+            color: #555;
+        }
+        
+        .ep-number {
+            font-weight: 600;
+            color: #FF6600;
+            min-width: 60px;
+        }
+        
+        .date {
+            font-weight: 500;
+            color: #666;
+            min-width: 70px;
+        }
+        
+        .content-cell {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .divider {
+            color: #ccc;
+        }
+        
+        .unavailable {
+            color: #999;
+            font-style: italic;
+        }
+        
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 200px;
+        }
+        
+        audio {
+            width: 100%;
+            max-width: 200px;
+            height: 30px;
+        }
+        
+        audio::-webkit-media-controls-panel {
+            background-color: #f0f0f0;
+            border-radius: 4px;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            background-color: #ffebee;
+            color: #c62828;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        footer {
+            background: #333;
+            color: #bbb;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #FF6600;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        footer a:hover {
+            color: #FF8533;
+            text-decoration: underline;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .footer-content p {
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .header-text h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header-content {
+                gap: 10px;
+            }
+            
+            .logo {
+                max-width: 80px;
+            }
+            
+            thead th {
+                padding: 12px 8px;
+                font-size: 0.85rem;
+            }
+            
+            tbody td {
+                padding: 12px 8px;
+                font-size: 0.85rem;
+            }
+            
+            .content-cell {
+                font-size: 0.8rem;
+            }
+            
+            audio {
+                max-width: 150px;
+            }
+            
+            .table-wrapper {
+                overflow-x: auto;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="navbar-container">
-                <a href="#" class="logo">
-                    <span class="logo-icon">📻</span>
-                    O Outro Lado da Cidade
-                </a>
-                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
-                    <span class="theme-icon">🌙</span>
-                </button>
+    <div class="container">
+        <!-- Header com Logo -->
+        <header>
+            <div class="header-content">
+                <img src="https://via.placeholder.com/120x120/FF6600/FFFFFF?text=OLDC" alt="Logo O Outro Lado da Cidade" class="logo" id="logo">
+                <div class="header-text">
+                    <h1>O Outro Lado da Cidade</h1>
+                    <p>20 Programas de Rádio Comunitária | Julho – Dezembro 2011</p>
+                </div>
             </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>O Outro Lado da Cidade</h1>
-            <p class="tagline">20 programas de rádio comunitária sobre moradia, resistência e comunicação</p>
-            <p class="subtitle">Mauá, SP — Julho a Dezembro de 2011</p>
+        </header>
+        
+        <!-- Seção Sobre -->
+        <section class="about-section">
+            <h2>📻 Sobre o Programa</h2>
+            <p>
+                <strong>\"O Outro Lado da Cidade\"</strong> é um acervo sonoro resultante de pesquisa-ação desenvolvida entre julho e dezembro de 2011 no município de Mauá, SP.
+            </p>
+            <p>
+                Pesquisadora: <strong>Raquel Quintino Quero</strong>
+            </p>
+            <p>
+                Produção coletiva de 20 programas desenvolvidos pelos integrantes da <strong>ADEHAB (Associação pelo Desenvolvimento da Habitação do Brasil)</strong>, com colaboração da <strong>Rádio Z FM</strong>.
+            </p>
+            <p>
+                Os programas foram transmitidos nas manhãs de sábado, com envolvimento de cerca de 20 pessoas que formaram a <strong>Equipe de Repórteres Comunitários Z</strong>.
+            </p>
+            <p>
+                Cada edição continha <strong>4 blocos de cerca de 15 minutos</strong> abordando os problemas e possibilidades enfrentados pelos moradores da área do Chafik:
+            </p>
+            <p style="margin-top: 15px; color: #666;">
+                📜 <strong>História de Luta:</strong> Entrevistas de lideranças e moradores antigos<br>
+                👶 <strong>Expressão Criança:</strong> Bate-papo com crianças sobre seu cotidiano<br>
+                🎨 <strong>Talentos:</strong> Entrevistas com produtores de arte e cultura<br>
+                📋 <strong>Regularização Fundiária:</strong> Entrevista com especialistas<br>
+                📢 <strong>Informes:</strong> Divulgação de oportunidades aos moradores
+            </p>
+        </section>
+        
+        <!-- Tabela de Edições -->
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Edição</th>
+                        <th>Data</th>
+                        <th>História de Luta</th>
+                        <th>Talentos</th>
+                        <th>Expressão Criança</th>
+                        <th>Áudio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ep-number">01</td>
+                        <td class="date">16/07/2011</td>
+                        <td class="content-cell">Ronaldo entrevista Irineu, Iraci, Socorro e Josuel</td>
+                        <td class="content-cell">Thiago (desenhista) <span class="divider">•</span> Kátia (Dance)</td>
+                        <td class="content-cell">Mateus, Ester e Caio</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2001.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">02</td>
+                        <td class="date">23/07/2011</td>
+                        <td class="content-cell">Ronaldo entrevista Moisés Brás e Paulo Souza</td>
+                        <td class="content-cell">Mestre Raul, MC BIG, UDR</td>
+                        <td class="content-cell">Ester, Bruna e Mateus</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2002.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">03</td>
+                        <td class="date">30/07/2011</td>
+                        <td class="content-cell">Lucilene e Ronaldo entrevistam Tiãozinho</td>
+                        <td class="content-cell">UDR entrevista MC Quinho</td>
+                        <td class="content-cell">Mateus, Bruna e Ester</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2003.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">04</td>
+                        <td class="date">06/08/2011</td>
+                        <td class="content-cell">Cida Dias e Ronaldo entrevistam Antonio Oliveira e Sebastião Moreno</td>
+                        <td class="content-cell">Galdino entrevista André Melo (sertanejo)</td>
+                        <td class="content-cell">Prefeito Oswaldo Dias</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2004.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">05</td>
+                        <td class="date">20/08/2011</td>
+                        <td class="content-cell">Melhores Momentos</td>
+                        <td class="content-cell">—</td>
+                        <td class="content-cell">—</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2005.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">06</td>
+                        <td class="date">27/08/2011</td>
+                        <td class="content-cell">Bastidores - Raquel entrevista Jovenildo e Lucilene</td>
+                        <td class="content-cell">Lucilene entrevista Josefa e Ana Maria</td>
+                        <td class="content-cell">Cida Dias entrevista Sonia e Roque</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2006.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">07</td>
+                        <td class="date">03/09/2011</td>
+                        <td class="content-cell">Samira lê texto sobre regularização fundiária</td>
+                        <td class="content-cell">Comentário de Raquel Ronik - Estatuto das Cidades</td>
+                        <td class="content-cell">Debate ADEHAB</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2007.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">08</td>
+                        <td class="date">24/09/2011</td>
+                        <td class="content-cell">Entrevista com vereador Rogério Santana</td>
+                        <td class="content-cell">Joãozinho Costa (Lunar) e Miltinho</td>
+                        <td class="content-cell">Samira entrevista Simão Pedro + telefonema</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2008.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">09</td>
+                        <td class="date">01/10/2011</td>
+                        <td class="content-cell">Entrevista com Sales (advogado)</td>
+                        <td class="content-cell">Soares (assistente social - movimento ambiental)</td>
+                        <td class="content-cell">Samira entrevista Mateus e Adriano</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2009.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">10</td>
+                        <td class="date">08/10/2011</td>
+                        <td class="content-cell">Grupo de Mães + entrevista com Sinhara</td>
+                        <td class="content-cell">João Fávero (audiência de dezembro)</td>
+                        <td class="content-cell">Abaixo-assinado</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2010.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">11</td>
+                        <td class="date">15/10/2011</td>
+                        <td class="content-cell">Prof. Francisca Pini (FAMA)</td>
+                        <td class="content-cell">Estudantes FAMA - aprendizados da pesquisa</td>
+                        <td class="content-cell">José Teixeira + Caminhada</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2011.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">12</td>
+                        <td class="date">22/10/2011</td>
+                        <td class="content-cell">Programa especial sobre a Caminhada</td>
+                        <td class="content-cell">Mesa-redonda ADEHAB</td>
+                        <td class="content-cell">Deputado Paulo Teixeira</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2012.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">13</td>
+                        <td class="date">29/10/2011</td>
+                        <td class="content-cell">Melhores momentos</td>
+                        <td class="content-cell">—</td>
+                        <td class="content-cell">—</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2013.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">14</td>
+                        <td class="date">05/11/2011</td>
+                        <td class="content-cell">Cida entrevista Valdemir da Silva</td>
+                        <td class="content-cell">Entrevista com Jéssica (nova integrante)</td>
+                        <td class="content-cell">Advogado Sales</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2014.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">15</td>
+                        <td class="date">12/11/2011</td>
+                        <td class="content-cell">Ronaldo entrevista Sr. Hilário</td>
+                        <td class="content-cell">Grupo Tapera de Jurema</td>
+                        <td class="content-cell">Taís Aranha - comunicação comunitária</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2015.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">16</td>
+                        <td class="date">19/11/2011</td>
+                        <td class="content-cell">Ronaldo entrevista morador Luis</td>
+                        <td class="content-cell">PIK e Rafael (Rap Contra Ataque) + Samba Lenço</td>
+                        <td class="content-cell">Reprise entrevista Prof. Francisca - Observatório</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2016.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">17</td>
+                        <td class="date">26/11/2011</td>
+                        <td class="content-cell">Cida entrevista Laércio</td>
+                        <td class="content-cell">Entrada ao vivo do Observatório + cancelamento</td>
+                        <td class="content-cell">Samira entrevista Jovenildo</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2017.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">18</td>
+                        <td class="date">03/12/2011</td>
+                        <td class="content-cell">Entrevista com Paulo (novo integrante ADEHAB)</td>
+                        <td class="content-cell">Não aconteceu</td>
+                        <td class="content-cell">Dr. Sales</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2018.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">19</td>
+                        <td class="date">10/12/2011</td>
+                        <td class="content-cell">Cida entrevista Valdemir - campanha de medula</td>
+                        <td class="content-cell">Corrida de pedestre na área do Chafik</td>
+                        <td class="content-cell">Wellington (12) e Jennifer (14)</td>
+                        <td class="audio-controls">
+                            <audio controls>
+                                <source src="https://archive.org/download/outro-lado-da-cidade/Programa%20Outro%20Lado%20da%20Cidade%20Edi%C3%A7%C3%A3o%2019.mp3" type="audio/mpeg">
+                                Seu navegador não suporta áudio.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ep-number">20</td>
+                        <td class="date">17/12/2011</td>
+                        <td class="content-cell">Cida entrevista Alzeni</td>
+                        <td class="content-cell">Grupo Cantares - apresentação ao vivo</td>
+                        <td class="content-cell">Avaliação do ano com Ronaldo Melo</td>
+                        <td class="audio-controls">
+                            <span class="status-badge">⚠️ Corrompido</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </section>
-
-    <!-- Timeline Section -->
-    <section class="timeline-section">
-        <div class="container">
-            <h2>Cronologia — Julho a Dezembro 2011</h2>
-            <div class="timeline">
-                <div class="timeline-item" data-month="Julho">Julho</div>
-                <div class="timeline-item" data-month="Agosto">Agosto</div>
-                <div class="timeline-item" data-month="Setembro">Setembro</div>
-                <div class="timeline-item" data-month="Outubro">Outubro</div>
-                <div class="timeline-item" data-month="Novembro">Novembro</div>
-                <div class="timeline-item" data-month="Dezembro">Dezembro</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Highlights Section -->
-    <section class="highlights-section">
-        <div class="container">
-            <h2>Destaques Comunitários</h2>
-            <p class="section-subtitle">Programas que marcaram a pesquisa</p>
-            <div class="highlights-grid">
-                <!-- Populated by JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Main Content Section -->
-    <section class="main-section">
-        <div class="container">
-            <!-- Controls -->
-            <div class="controls">
-                <div class="filters">
-                    <h3>Filtrar por tema:</h3>
-                    <div class="filter-buttons">
-                        <button class="filter-btn active" data-filter="all">Todos</button>
-                        <button class="filter-btn" data-filter="história">História de Luta</button>
-                        <button class="filter-btn" data-filter="regularização">Regularização</button>
-                        <button class="filter-btn" data-filter="cultura">Cultura</button>
-                        <button class="filter-btn" data-filter="crianças">Crianças</button>
-                    </div>
-                </div>
-                <div class="view-toggle">
-                    <button class="view-btn active" data-view="grid" aria-label="Visualização em grade">
-                        ⊞ Grade
-                    </button>
-                    <button class="view-btn" data-view="list" aria-label="Visualização em lista">
-                        ≡ Lista
-                    </button>
-                </div>
-            </div>
-
-            <!-- Episodes Grid/List -->
-            <div class="episodes-container" id="episodesContainer">
-                <!-- Populated by JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-left">
-                    <h2>Sobre a Pesquisa</h2>
-                    <p>
-                        <strong>"O Outro Lado da Cidade"</strong> é um acervo sonoro resultante de pesquisa-ação realizada entre julho e dezembro de 2011 no município de Mauá, SP.
-                    </p>
-                    <p>
-                        A pesquisa, coordenada por <strong>Raquel Quintino Quero</strong>, investigou as relações entre moradia, comunicação comunitária e resistência urbana, com foco na região do Jardim Zaíra e área do ADEHAB (Associação de Desenvolvimento Habitacional).
-                    </p>
-                    <p>
-                        Os 20 programas de rádio documentam vozes comunitárias, histórias de luta por regularização fundiária, expressões culturais e perspectivas de crianças do bairro — criando um arquivo vivo de memória coletiva.
-                    </p>
-                </div>
-                <div class="about-right">
-                    <div class="info-box">
-                        <h3>📍 Localização</h3>
-                        <p><strong>Mauá, São Paulo</strong></p>
-                        <p>Jardim Zaíra e região ADEHAB</p>
-                    </div>
-                    <div class="info-box">
-                        <h3>📅 Período</h3>
-                        <p><strong>Julho — Dezembro 2011</strong></p>
-                        <p>20 programas mensais</p>
-                    </div>
-                    <div class="info-box">
-                        <h3>🎙️ Pesquisadora</h3>
-                        <p><strong>Raquel Quintino Quero</strong></p>
-                        <p><a href="https://raquelquintino.com" target="_blank">raquelquintino.com</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Map Section -->
-    <section class="map-section">
-        <div class="container">
-            <h2>Localização — Mauá, SP</h2>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.8845123456!2d-46.4559!3d-23.6711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6c8c8c8c8c8d%3A0x0!2sJardim%20Za%C3%ADra%2C%20Mau%C3%A1!5e0!3m2!1spt-BR!2sbr!4v" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <h2>Perguntas Frequentes</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>Como surgiu este projeto?</h3>
-                    <p>
-                        O projeto nasceu de uma pesquisa-ação que buscava compreender as dinâmicas de comunicação comunitária e resistência urbana em contextos de lutas por moradia. Os programas de rádio foram produzidos participativamente com moradores de Mauá.
-                    </p>
-                </div>
-                <div class="faq-item">
-                    <h3>Posso usar os áudios?</h3>
-                    <p>
-                        Sim! Os programas estão disponíveis no Internet Archive sob princípios de acesso aberto. Consulte os créditos de cada episódio e cite adequadamente em trabalhos acadêmicos ou comunitários.
-                    </p>
-                </div>
-                <div class="faq-item">
-                    <h3>Quem produziu os programas?</h3>
-                    <p>
-                        Os programas foram produzidos colaborativamente com moradores, repórteres comunitários e produtores locais. Veja a seção de Créditos para nomes e informações específicas de cada episódio.
-                    </p>
-                </div>
-                <div class="faq-item">
-                    <h3>Há transcrições disponíveis?</h3>
-                    <p>
-                        Transcrições parciais e resumos estão sendo adicionados progressivamente. Você pode contribuir transcrevendo episódios! Entre em contato para participar.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
+        
+        <!-- Footer -->
+        <footer>
             <div class="footer-content">
-                <div class="footer-section">
-                    <h4>O Outro Lado da Cidade</h4>
-                    <p>Pesquisa-ação em moradia e comunicação comunitária (2011)</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Links</h4>
-                    <ul>
-                        <li><a href="https://raquelquintino.com" target="_blank">Raquel Quintino</a></li>
-                        <li><a href="https://archive.org/search.php?query=outro+lado+da+cidade" target="_blank">Internet Archive</a></li>
-                        <li><a href="https://github.com/raquelquintino/outro-lado-da-cidade" target="_blank">GitHub</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Citação Acadêmica</h4>
-                    <p>
-                        <code>Quero, Raquel Quintino. "O Outro Lado da Cidade: 20 Programas de Rádio Comunitária." Mauá, 2011.</code>
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h4>Compartilhar</h4>
-                    <div class="social-buttons">
-                        <a href="https://twitter.com/intent/tweet?url=https://raquelquintino.github.io/outro-lado-da-cidade" target="_blank" aria-label="Compartilhar no Twitter">𝕏</a>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://raquelquintino.github.io/outro-lado-da-cidade" target="_blank" aria-label="Compartilhar no Facebook">f</a>
-                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://raquelquintino.github.io/outro-lado-da-cidade" target="_blank" aria-label="Compartilhar no LinkedIn">in</a>
-                    </div>
-                </div>
+                <p>
+                    <strong>O Outro Lado da Cidade</strong><br>
+                    20 Programas de Rádio Comunitária • Julho – Dezembro 2011
+                </p>
+                <p>
+                    Pesquisadora: <strong>Raquel Quintino Quero</strong><br>
+                    Produção: <strong>ADEHAB</strong> + <strong>Rádio Z FM</strong><br>
+                    Equipe: Repórteres Comunitários Z
+                </p>
+                <p>
+                    Acervo completo no <a href="https://archive.org/search.php?query=outro+lado+da+cidade" target="_blank">Internet Archive</a> | 
+                    <a href="https://github.com/raquelquintino/outro-lado-da-cidade" target="_blank">GitHub</a>
+                </p>
+                <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.8;">
+                    CC BY-NC-SA 4.0 • Citação: Quero, Raquel Quintino. \"O Outro Lado da Cidade: 20 Programas de Rádio Comunitária.\" Mauá, 2011.
+                </p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2011–2026 Raquel Quintino Quero. Licença CC BY-NC-SA 4.0</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modal para Transcrição -->
-    <div id="transcriptModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Fechar">&times;</button>
-            <div id="modalBody">
-                <!-- Populated by JS -->
-            </div>
-        </div>
+        </footer>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
